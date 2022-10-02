@@ -1,0 +1,175 @@
+mixin sectionCounter(name, number)
+  .section-counter
+    .section-counter__name= name
+    .section-counter__hr
+    .section-counter__number= number
+
+
+doctype html
+html(lang='en')
+    include includes/head
+    body
+        .all
+            main
+              #fullpage
+                //Geography
+                section.section.geography
+                  +sectionCounter('ГЕОГРАФИЯ', '01')
+                  .geography-all
+                    include includes/header
+                    .geography-all__wrapper
+                      .wrapper-info
+                        h1.wrapper-info__title Более 45 лет на рынке станкостроения
+                        .wrapper-info__subtitle.
+                          Наше оборудование эксплуатируется на <span>134</span> предприятиях 
+                          в <span>10</span> странах мира
+                        p.wrapper-info__desc.
+                          По заявкам заказчиков мы изготавливаем и поставляем специальное металлорежущее 
+                          оборудование для многооперационной обработки деталей практически любых конфигураций в широком 
+                          диапазоне размеров, с выполнением всех требований по производительности, точности и 
+                          переналаживаемости.
+                      .wrapper-img
+                        img(src="img/map.png", alt="")
+
+
+                //About
+                section.section.about
+                  +sectionCounter('О НАС', '02')
+                  .about-all
+                    include includes/header-two
+                    .about-all__wrapper
+                      .wrapper-list
+                        .wrapper-list__item
+                          .item-icon
+                          .item-text Почти 50 лет опыта станкостроения
+                        .wrapper-list__item
+                          .item-icon
+                          .item-text Индивидуальное производство специального оборудования
+                        .wrapper-list__item
+                          .item-icon
+                          .item-text Широкий парк станочного оборудования
+                        .wrapper-list__item
+                          .item-icon
+                          .item-text Гарантия на изготавливаемое оборудование 24 месяца
+                      .wrapper-info
+                        h1.wrapper-info__title О нас
+                        p.wrapper-info__text.
+                          Технический проект на строительство Барановичского завода автоматических линий разработан на основании постановления Совета Министров СССР от 17 сентября 1969 года № 755 и приказа Министра станкостроительной и инструментальной промышленности СССР от 15 октября 1969 года № 287. 
+                          <br><br>
+                          14 января 1971 года на площадке, отведенной под строительство завода, был вынут первый ковш земли. Первые производственные мощности предприятия вступили в строй в 1974 году, а уже в январе 1975 года
+
+                
+                //Work
+                section.section.work
+                  +sectionCounter('КАК МЫ РАБОТАЕМ', '03')
+                  .work-all
+                    include includes/header
+                    .work-all__main
+                      h1.main-title Как мы работаем
+                      .main-list
+                        .main-list__item
+                          .item-img
+                            img(src="img/work-1.png", alt="")
+                          .item-desc Техническое решение поставленной заказчиком задачи
+                        .main-list__item
+                          .item-img
+                            img(src="img/work-2.png", alt="")
+                          .item-desc Проектирование и изготовление
+                        .main-list__item
+                          .item-img
+                            img(src="img/work-3.png", alt="")
+                          .item-desc Шеф-монтаж и пусконаладка
+                        .main-list__item
+                          .item-img
+                            img(src="img/work-4.png", alt="")
+                          .item-desc Гарантийное и постгарантийное обслуживание
+
+
+                //Services
+                section.section.services
+                  +sectionCounter('ПРОДУКЦИЯ', '04')
+                  .services-all
+                    include includes/header-two
+                    .services-all__products
+                      .products-head
+                        .products-head__titles
+                          h1 Продукция
+                          h1.title-other Услуги
+                        .products-head__arrows
+                          .arrows-item.arrow-prev
+                            img(src="img/svg/arrow-white.svg", alt="")
+                          .arrows-item.arrow-next
+                            img(src="img/svg/arrow-white.svg", alt="")
+                      .products-main
+                        .swiper
+                          .swiper-wrapper
+                            .swiper-slide
+                              .head
+                                img(src="img/services-1.png", alt="")
+                              .text Станки агрегатные и специальные
+                            .swiper-slide
+                              .head
+                                img(src="img/services-2.png", alt="")
+                              .text Автоматические линии, технологические комплексы
+                            .swiper-slide.slide-other
+                              .head
+                                img(src="img/services-3.png", alt="")
+                              .text Нестандартное оборудование
+                            .swiper-slide
+                              .head
+                                img(src="img/services-4.png", alt="")
+                              .text Нестандартное оборудование
+
+
+                //Partners
+                section.section.partners
+                  +sectionCounter('ПАРТНЕРЫ', '05')
+                  .partners-all
+                    include includes/header
+                    .partners-all__main
+                      .main-head
+                        h1.main-head__title Партнеры
+                        .main-head__arrows
+                          .arrows-item.arrow-prev-two
+                            img(src="img/svg/arrow-black.svg", alt="")
+                          .arrows-item.arrow-next-two
+                            img(src="img/svg/arrow-black.svg", alt="")
+                      .main-content
+                        .swiper-two
+                          .swiper-wrapper
+                            .swiper-slide
+                              .slide__items
+                                .item
+                                  img(src="img/partner-1.png", alt="")
+                                .item
+                                  img(src="img/partner-5.png", alt="")
+                            .swiper-slide
+                              .slide__items
+                                .item
+                                  img(src="img/partner-2.png", alt="")
+                                .item
+                                  img(src="img/partner-6.png", alt="")
+                            .swiper-slide
+                              .slide__items
+                                .item
+                                  img(src="img/partner-3.png", alt="")
+                                .item
+                                  img(src="img/partner-7.png", alt="")
+                            .swiper-slide
+                              .slide__items
+                                .item
+                                  img(src="img/partner-4.png", alt="")
+                                .item
+                                  img(src="img/partner-8.png", alt="")
+                            .swiper-slide
+                              .slide__items
+                                .item
+                                  img(src="img/partner-4.png", alt="")
+                                .item
+                                  img(src="img/partner-8.png", alt="")
+
+
+                //Footer
+                include includes/footer
+
+        include includes/scripts

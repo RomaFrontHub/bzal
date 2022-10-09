@@ -11,12 +11,18 @@ html(lang='en')
     body
         .all
             main
+              //Header
+              include includes/header
+              //Header-two
+              include includes/header-two
+              //counter
+              +sectionCounter('ГЕОГРАФИЯ', '01')
               #fullpage
                 //Geography
                 section.section.geography
-                  +sectionCounter('ГЕОГРАФИЯ', '01')
+                  //- +sectionCounter('ГЕОГРАФИЯ', '01')
                   .geography-all
-                    include includes/header
+                    //- include includes/header
                     .geography-all__wrapper
                       .wrapper-info
                         h1.wrapper-info__title Более 45 лет на рынке станкостроения
@@ -33,10 +39,10 @@ html(lang='en')
 
 
                 //About
-                section.section.about
-                  +sectionCounter('О НАС', '02')
+                section.section.about.section-changer
+                  //- +sectionCounter('О НАС', '02')
                   .about-all
-                    include includes/header-two
+                    //- include includes/header-two
                     .about-all__wrapper
                       .wrapper-list
                         .wrapper-list__item
@@ -61,9 +67,9 @@ html(lang='en')
                 
                 //Work
                 section.section.work
-                  +sectionCounter('КАК МЫ РАБОТАЕМ', '03')
+                  //- +sectionCounter('КАК МЫ РАБОТАЕМ', '03')
                   .work-all
-                    include includes/header
+                    //- include includes/header
                     .work-all__main
                       h1.main-title Как мы работаем
                       .main-list
@@ -86,10 +92,10 @@ html(lang='en')
 
 
                 //Services
-                section.section.services
-                  +sectionCounter('ПРОДУКЦИЯ', '04')
+                section.section.services.section-changer
+                  //- +sectionCounter('ПРОДУКЦИЯ', '04')
                   .services-all
-                    include includes/header-two
+                    //- include includes/header-two
                     .services-all__products
                       .products-head
                         .products-head__titles
@@ -123,9 +129,9 @@ html(lang='en')
 
                 //Partners
                 section.section.partners
-                  +sectionCounter('ПАРТНЕРЫ', '05')
+                  //- +sectionCounter('ПАРТНЕРЫ', '05')
                   .partners-all
-                    include includes/header
+                    //- include includes/header
                     .partners-all__main
                       .main-head
                         h1.main-head__title Партнеры
@@ -171,5 +177,6 @@ html(lang='en')
 
                 //Footer
                 include includes/footer
+
 
         include includes/scripts
